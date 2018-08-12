@@ -12,10 +12,7 @@ class EmoNet():
 		self.num_blocks = num_blocks
 		self.num_layers_per_block = num_layers_per_block
 
-	def residual_dilated_block(self, x, filters, kernel_size, dilation, name):
-		with tf.variable_scope(name) as scope:
-			filter = tf.layers.conv2d(x, filters=filters, kernel_size=kernel_size, dilation_rate=dilation, padding='same', activation=tf.nn.tanh, name="filter")
-			gate = tf.layers.conv2d(x, filters=filters, kernel_size=kernel_size, dilation_rate=dilation, padding='same', activation=tf.nn.sigmoid, name="gate")
+	 name="gate")
 
 			out = filter*gate
 			out = tf.layers.conv2d(out, filters=filters, kernel_size=1, padding='same', activation=tf.nn.tanh, name="out")

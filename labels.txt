@@ -1,6 +1,7 @@
-Angry
-Fear
-Happy
-Sad
-Surprise
-Neutral
+HAPPY
+ANXIOUS
+FEAR
+INFIRIORITY
+EXITEMENT
+ANGRY
+CONFIDENCE
